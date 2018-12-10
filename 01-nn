@@ -1,0 +1,34 @@
+import tensorflow as tf
+import numpy as np
+
+# 使用np来创造两个样本[0,1],[2,3]
+x = np.arange(4, dtype=np.float32).reshape(2,2)
+
+# 使用np来创造两个label[0,1]
+y_ = np.array([0,1], dtype=np.float32).reshape(2,1)
+
+# 对神经元的权重w和偏差b进行初始化
+w1 = tf.Variable(tf.random_normal([2,3], stddev=1, seed=1))
+w2 = tf.Variable(tf.random_normal([3,1], stddev=1, seed=1))
+b1 = tf.Variable(tf.zeros([3]))
+b2 = tf.Variable(tf.zeros([1]))
+
+# 计算wx+b运算之后的激活值
+a = tf.nn.relu(tf.matmul(x,w1) + b1)
+y = tf.matmul(a, w2) + b2
+
+# 采用交叉熵作为损失函数
+cost = tf.nn.sigmoid_cross_entropy_with_logits(logits=y, labels=y_, name=None)
+# 采用地图下降法作为优化器
+train_op = tf.train.GradientDescentOptimizer(0.01).minimize(cost)
+# 执行会话
+with tf.Session() as sess:
+    init = tf.initialize_all_variables()
+    # init = tf.global_variables_initialize()
+    sess.run(init)
+    # 这里定义了100次循环
+    for i in range(100):
+        sess.run(train_op)
+
+    print(sess.run(w1))
+    print(sess.run(w2))
