@@ -1,0 +1,58 @@
+'''
+# utf-8
+
+ *Copyright: Copyright (c) 2019
+ *Created on 2019-01-09
+ *Author:Pan_Zhiwei
+ *Version python 3.6
+ *Title: MultiProcess
+
+'''
+
+
+import os
+import cv2
+from tqdm import tqdm
+
+'''
+1.设置必要的读取路径和存储路径
+'''
+# path = os.getcwd() # 获取当前路径
+# 处理的图片不是在当前文件下，可以直接添加绝对路径
+path = '/media/pzw/0E50196C0E50196C/weixin/MultiProcess/0'   # 第一级文件夹 0 开头
+## print(path) # 习惯每步都确认一哈有没有出错，大家可以直接忽略
+dst_path0 = '/media/pzw/0E50196C0E50196C/weixin/MultiProcess/0_pro' # 处理完成后的图片存储位置
+
+'''
+2.进入次级文件夹并读取文件
+'''
+dir_names = os.listdir(path)    # 读取次级文件夹名字
+# print(dir_names)
+# tqdm是为了显示当前读取到第n个文件夹了，当然可以换到其他位置，不了解的小伙伴看之前的文章哈
+for dir in tqdm(dir_names):
+    path_1 = os.path.join(path, dir) # 获取次级文件夹的路径 ||次级1开头
+    # print(path_1)
+    pic_names = os.listdir(path_1)    #读取图片的名字
+    # print(pic_names)
+    dst_path1 = os.path.join(dst_path0,dir) # 对应的次级存储路径
+    '''
+    3.对图片进行操作
+    此时可以认为是在单独一个文件里面的操作，这个文件夹内操作完成之后，
+    便会执行下一个文件夹，这样子就很好理解怎么做
+    这段话放在这里可能会影响大家理解，但是是为了告诉大家思路哈。读代码的时候可以删了
+    '''
+    for pic_name in pic_names:
+        new_path = os.path.join(path_1, pic_name)
+        # print(new_path) # 图片的读取路径
+        dst_pic_name = pic_name.split('.')[0]+'>_<.jpg' # 对处理完的图片名字进行修改，比较被修理之后会哭的
+        # print(dst_pic_name)
+        dst_path = os.path.join(dst_path1, dst_pic_name)
+        print(dst_path)
+        # 读取图片
+        img_0 = cv2.imread(new_path, cv2.IMREAD_GRAYSCALE) # 变成灰度图
+        # 这里可以添加你们想要的操作，裁剪，变换等等
+        # 判断存储路径是否存在，不存在，创建新路径
+        isExists = os.path.exists(dst_path1)
+        if not isExists:
+            os.makedirs(dst_path1)
+        cv2.imwrite(dst_path, img_0)
