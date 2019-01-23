@@ -1,0 +1,35 @@
+from keras.preprocessing.image import ImageDataGenerator
+
+path = '/media/pzw/0E50196C0E50196C/job/triode/train1' # 类别子文件夹的上一级
+dst_path = '/media/pzw/0E50196C0E50196C/job/triode/validate/triodeTinL'
+# 　图片生成器
+datagen = ImageDataGenerator(
+
+    rotation_range=5,
+    width_shift_range=0.02,
+    height_shift_range=0.02,
+    shear_range=0.02,
+    horizontal_flip=True,
+    vertical_flip=True
+)
+
+gen = datagen.flow_from_directory(
+                           path,
+                           target_size=(224, 224),
+                           batch_size=15,
+                           save_to_dir=dst_path,#生成后的图像保存路径
+                           save_prefix='xx',
+                           save_format='jpg')
+  
+for i in range(6):
+    gen.next()
+
+'''
+path:文件读入的路径，必须是子文件夹的上一级（这里是个坑，不过试一哈就懂了）
+target_size:图片resize成的尺寸，不设置会默认设置为（256.256）
+batch_size:每次输入的图片的数量，例如batch_size=32，一次进行增强的数量为32，
+个人经验：batch_size的大小最好是应该和文件的数量是可以整除的关系
+save_to_dir:增强后图片的保存位置
+save_prefix:文件名加前缀，方便查看
+save_format:保存图片的数据格式
+'''
