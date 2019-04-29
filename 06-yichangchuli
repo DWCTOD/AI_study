@@ -1,0 +1,17 @@
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+def url_is_correct():
+    try:
+        url = input('请输入正确的图片路径：')
+        
+        queryDir = url
+        src = mpimg.imread(queryDir)
+        return queryDir
+    except:
+        print('有误的图片路径，请重新输入：')
+    return url_is_correct()
+
+queryDir = url_is_correct()
+queryImg = mpimg.imread(queryDir)
+plt.imshow(queryImg,cmap=plt.cm.gray)
+plt.show()
