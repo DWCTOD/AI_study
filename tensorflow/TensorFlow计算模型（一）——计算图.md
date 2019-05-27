@@ -22,7 +22,13 @@
 
 ​        TensorFlow是通过计算图的形式来表述计算的编程系统。TensorFlow中的每个计算都是计算图上的一个节点，而节点之间的边描述了计算之间的依赖关系。
 
-![](https://github.com/DWCTOD/AI_study/blob/master/image/20171221100429378.gif)
+![](https://github.com/DWCTOD/AI_study/blob/master/image/20171221100429378.gif "计算图")
+
+
+
+
+
+
 
 
 
