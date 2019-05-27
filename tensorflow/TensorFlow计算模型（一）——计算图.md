@@ -18,9 +18,19 @@
 
 ​        如果说TensorFlow中的Tensor表明了它的**数据结构**，那么Flow则体现了它的**计算模型**。中文将Flow翻译为“流”，它直观的表达了**张量之间通过计算相互转化的过程**。
 
-- [ ] TensorFlow的概念
+- [ ] TensorFlow中的计算图
 
-​        TensorFlow是通过计算图的形式来表述计算的编程系统。TensorFlow中的每个计算都是计算图上的一个节点，而节点之间的边描述了计算之间的依赖关系。
+​        TensorFlow是通过计算图的形式来表述计算的编程系统。TensorFlow中的每个计算都是计算图上的一个节点，而节点之间的边描述了计算之间的依赖关系。![](https://github.com/DWCTOD/AI_study/blob/master/image/20171221100429378.gif)
+
+![](https://github.com/DWCTOD/AI_study/blob/master/image/20171221100429378.gif)
+
+
+
+
+
+![](/media/pzw/0E5019DD0E5019DD/github/AI_study/image/20171221100429378.gif)
+
+
 
 
 
