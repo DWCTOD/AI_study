@@ -82,7 +82,16 @@ with tf.Session(graph=g2) as sess:
         print(sess.run(tf.get_variable("v")))
 ```
 
-​        以上代码产生了两个计算图，每个计算图中定义了一个名字为“v”的变量。在计算图g1中，将v初始化为0；在计算图g2中，将v初始化为1；
+​        以上代码产生了两个计算图，每个计算图中定义了一个名字为“v”的变量。在计算图g1中，将v初始化为0；在计算图g2中，将v初始化为1。可以看出来当运行不同计算图时，变量v的值也是不一样的。**TensorFlow中的计算图不仅仅可以用来隔离张量和计算，它还提供了管理张量和计算的机制**。计算图可以通过tf.Graph.device函数来制定运行计算的设备。这为TensorFlow使用GPU提供了机制。以下程序可以将加法计算泡在GPU上。
+
+```
+g = tf.Graph()
+# 指定计算运行的设备。
+with g.device('/gpu:0'):
+    result = a+b
+    print(result)
+    
+```
 
 
 
