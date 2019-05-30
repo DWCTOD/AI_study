@@ -10,11 +10,11 @@ TensorFlow游乐场是一个通过网页浏览器就可以训练简单神经网�
 
 ### TensorFlow playground界面
 
-![img](https://upload-images.jianshu.io/upload_images/2300716-eca476e785ce61b2.png)
+![img](../image/tensorflowPlayground.png)
 
 ### TensorFlow playground界面示意图
 
-![tensorflowPlayground示意图](/media/pzw/0E5019DD0E5019DD/资料/素材/tensorflowPlayground示意图.png)
+![tensorflowPlayground示意图](../image/tensorflowPlayground示意图.png)
 
 ### 功能详解
 
@@ -67,6 +67,6 @@ TensorFlow游乐场是一个通过网页浏览器就可以训练简单神经网�
 
 网络结构：选择含两个隐藏层，第一个隐藏层4个神经元，第二个隐藏层2个神经元
 
-![深度录屏_选择区域_20190530114647](/media/pzw/0E5019DD0E5019DD/资料/素材/深度录屏_选择区域_20190530114647.gif)
+![深度录屏_选择区域_20190530114647](../image/深度录屏_选择区域_20190530115657.gif)
 
 参考自：https://www.jianshu.com/p/95d46de63408
