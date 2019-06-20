@@ -19,5 +19,5 @@
 
 main.py utils.py 是集成分类器模型
 
-![](image/AI_study.jpg)
+![](./image/AI_study.jpg)
 
