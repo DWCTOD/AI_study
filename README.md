@@ -19,4 +19,5 @@
 
 main.py utils.py 是集成分类器模型
 
-![](image/公众号.jpg)
+![](https://github.com/DWCTOD/AI_study/blob/master/image/%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
+
