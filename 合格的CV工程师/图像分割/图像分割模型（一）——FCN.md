@@ -2,11 +2,19 @@
 >
 > 参考和来源：有三AI，https://zhuanlan.zhihu.com/p/66050456
 
+> 今天开启新的专栏《图像分割模型》。在这里，我们将共同探索解决分割问题的主流网络结构和设计思想，这是第1篇文章。
+>
+> 今天要说的是占据了图像分割编解码结构大半江山的Fully Convolutional Network（FCN）。
+>
+>  作者 | 孙叔桥
+>
+> 编辑 | 言有三
 
+## 图像分割模型——FCN
 
-## 图像分割模型
+FCN开源代码：https://github.com/shelhamer/fcn.berkeleyvision.org
 
-FCN
+其他优质参考文章：https://blog.csdn.net/qq_36269513/article/details/80420363
 
 > 1、什么是分割
 
