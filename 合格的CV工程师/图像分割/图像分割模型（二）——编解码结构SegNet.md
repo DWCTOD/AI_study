@@ -44,7 +44,7 @@ https://github.com/tkuanlun350/Tensorflow-SegNet
 
 >  2 SegNet
 
-SegNet的编码器结构与解码器结构是一一对应的，即一个decoder具有与其对应的encoder相同的空间尺寸和通道数。对于基础SegNet结构，二者各有13个卷积层，其中编码器的卷积层就对应了VGG16网络结构中的前13个卷积层。
+**SegNet的编码器结构与解码器结构是一一对应的，即一个decoder具有与其对应的encoder相同的空间尺寸和通道数。**对于基础SegNet结构，二者各有13个卷积层，其中编码器的卷积层就对应了VGG16网络结构中的前13个卷积层。
 
 下图是SegNet的网络结构，其中蓝色代表卷积+Batch Normalization+ReLU，绿色代表max-pooling，红色代表上采样，黄色是Softmax。
 
@@ -54,7 +54,9 @@ SegNet的编码器结构与解码器结构是一一对应的，即一个decoder�
 
 ![](../image/SS/SegNet-4.webp)
 
-图中左侧是SegNet使用的解码方式，右侧是FCN对应的解码方式。可以看到，SegNet的做法是先根据**位置信息（index）**生成稀疏的特征图，再利用后续的卷积计算恢复稠密特征图。而FCN则直接利用反卷积操作求得上采样后的特征图，再将其与编码器特征图相加。
+图中左侧是SegNet使用的解码方式，右侧是FCN对应的解码方式。可以看到，SegNet的做法是先根据**位置信息（index）**生成稀疏的特征图，再利用后续的卷积计算恢复稠密特征图。而FCN则直接利用**反卷积**操作求得上采样后的特征图，再将其与编码器特征图相加。
+
+此处的[反卷积和上采样](https://github.com/DWCTOD/AI_study/blob/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E6%A8%A1%E5%9E%8B%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94FCN.md)已在上一篇文章的补充内容中详细讲解说明过。
 
 >  3 解码器变体
 
