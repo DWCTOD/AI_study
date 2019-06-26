@@ -20,6 +20,12 @@ https://github.com/tkuanlun350/Tensorflow-SegNet
 
 其他优质文章参考：https://blog.csdn.net/zhuzemin45/article/details/79709874
 
+> 0 简介
+
+SegNet是Cambridge提出旨在解决自动驾驶或者智能机器人的图像语义分割深度网络，开放源码，基于caffe框架。SegNet基于FCN，修改VGG-16网络得到的语义分割网络，有两种版本的SegNet，分别为SegNet与Bayesian SegNet，同时SegNet作者根据网络的深度提供了一个basic版（浅网络）。
+
+
+
 > **1 编解码结构**
 
 分割任务中的编码器encode与解码器decode就像是玩“你来比划我来猜”的双方：比划的人想把看到的东西用一种方式描述出来，猜的人根据比划的人提供的信息猜出答案。
@@ -58,6 +64,8 @@ https://github.com/tkuanlun350/Tensorflow-SegNet
 
 此处的[反卷积和上采样](https://github.com/DWCTOD/AI_study/blob/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E6%A8%A1%E5%9E%8B%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94FCN.md)已在上一篇文章的补充内容中详细讲解说明过。
 
+
+
 >  3 解码器变体
 
 前文已经提到，编解码结构中，解码器的效果和复杂程度对于整个分割网络的影响是非常大的。这里我们就一起来看一下不同解码器结构和它们的效果。
@@ -82,11 +90,17 @@ SegNet中一共尝试了8种不同的解码结构，先上结果：
 
 
 
-补充：
+补充&总结：
 
+**SegNet的亮点：**
 
+（1）用上采样代替FCN中的反卷积操作，减少了计算量
 
+（2）SegNet中的Pooling多了一个index功能，即池化过程会保存其max值的位置信息
 
+**Softmax的作用：**
+
+在SeNet中最后每个像素都会对每一类的概率进行计算，再通过Softmat输出概率最大的一个，然后这个像素点就认为是这一类别，对应的概率就是这一**像素属于该类的概率**。
 
 > 本文仅用于自己个人学习如有侵权请告知 公众号：AI算法与图像处理  删除，谢谢！
 >
