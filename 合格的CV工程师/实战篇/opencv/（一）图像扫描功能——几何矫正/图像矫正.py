@@ -14,6 +14,7 @@ def Get_Outline(input_dir):
 
 def Get_cnt(edged):
     cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    
     cnts = cnts[0] if  imutils.is_cv2()  else   cnts[1]
     docCnt =None
 
