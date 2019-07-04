@@ -1,5 +1,6 @@
 # 用法：直接运行下面的操作即可
 # python3 detect_blur.py --images images
+# 按 q 不断切换到下一张图片
 
 # 导入需要的库
 from imutils import paths
