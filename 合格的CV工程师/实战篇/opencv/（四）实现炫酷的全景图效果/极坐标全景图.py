@@ -35,9 +35,9 @@ for j in range(y0):
 
 print(except_count)
 # 提取ROI区域进行平滑处理，效果一般
-roi = wrapped_img[radius:2*radius,radius-5:radius+5]
+roi = wrapped_img[0:radius,radius-5:radius+5,:]
 roi_blur = cv2.blur(roi,(3,3))
-wrapped_img[radius:2*radius,radius-5:radius+5]=roi_blur
+wrapped_img[0:radius,radius-5:radius+5,:]=roi_blur
 #wrapped_img = cv2.resize(wrapped_img,None,fx=1,fy=1,interpolation=cv2.INTER_CUBIC)
 name = 'p_'+img_name
 cv2.imwrite(name, wrapped_img)
