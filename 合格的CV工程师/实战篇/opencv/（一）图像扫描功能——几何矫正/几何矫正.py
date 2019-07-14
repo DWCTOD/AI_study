@@ -39,7 +39,7 @@ if __name__=="__main__":
     image,gray,edged = Get_Outline(input_dir)
     docCnt = Get_cnt(edged)
     print(docCnt.reshape(4,2))
-     # result_img = four_point_transform(image, docCnt.reshape(4,2)) # 对原始图像进行四点透视变换
+    # result_img = four_point_transform(image, docCnt.reshape(4,2)) # 对原始图像进行四点透视变换
     # 改变变换的模式 公交卡的比例是16:9
     pts1 = np.float32(docCnt.reshape(4,2))
     # 加入一个判断，对不同宽高采用不同的系数
