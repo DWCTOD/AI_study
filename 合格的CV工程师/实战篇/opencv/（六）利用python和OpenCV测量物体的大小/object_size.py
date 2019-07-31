@@ -52,6 +52,7 @@ for c in cnts:
 
 	# compute the rotated bounding box of the contour
 	orig = image.copy()
+	# orig = image 可将所有结果显示，同时将最后两行显示的代码缩进可以一次性显示最终结果
 	box = cv2.minAreaRect(c)
 	box = cv2.cv.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box)
 	box = np.array(box, dtype="int")
