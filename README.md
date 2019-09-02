@@ -5,7 +5,7 @@
 
 [计算机视觉算法岗面经整理——点击可查看完整面经目录](https://github.com/DWCTOD/AI_study/blob/master/%E7%AE%97%E6%B3%95%E5%B2%97%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/%E7%AE%97%E6%B3%95%E5%B2%97%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86.md)
 
-### [数字图像处理——传统图像处理..未完成](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AF%87)
+[数字图像处理——传统图像处理..未完成](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AF%87)
 
 代码能力——python和leetcode
 
@@ -13,11 +13,9 @@
 
 深度学习理论
 
-### <img src="./logo/1.ico" width='40'>[实战方面](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AE%9E%E6%88%98%E7%AF%87)
+<img src="./logo/1.ico" width='25'>[实战方面](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AE%9E%E6%88%98%E7%AF%87)
 
-
-
-- #### <img src="./logo/2.ico" width='30'>[opencv..正在进行中](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AE%9E%E6%88%98%E7%AF%87/opencv)
+- <img src="./logo/2.ico" width='25'>[opencv..正在进行中](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AE%9E%E6%88%98%E7%AF%87/opencv)
 
 | 项目                                                         |                           效果展示                           | 代码链接                                                     |
 | ------------------------------------------------------------ | :----------------------------------------------------------: | ------------------------------------------------------------ |
