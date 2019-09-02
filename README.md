@@ -3,6 +3,8 @@
 
 计划包括以下几部分的内容：
 
+计算机视觉算法岗面经整理
+
 ### [数字图像处理——传统图像处理..未完成](https://github.com/DWCTOD/AI_study/tree/master/%E5%90%88%E6%A0%BC%E7%9A%84CV%E5%B7%A5%E7%A8%8B%E5%B8%88/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AF%87)
 
 代码能力——python和leetcode

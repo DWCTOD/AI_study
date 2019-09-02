@@ -102,7 +102,7 @@ print("SSIM:{}".format(score))
 
 在第3行中使用scikit-image中的compare_ssim函数，我们计算得到一个score和差分图片diff
 
-score代表两张输入图片的结构相似性索引。
+score代表两张输入图片的**结构相似性索引**。
 
 该值的范围在[-1, 1]，其中值为1时为“完美匹配”。
 
@@ -190,6 +190,8 @@ python3 image_diff.py --first images/original_03.png --second images/modified_03
 
 **总结**
 
-今天的稳重，我们学习了如何使用OpenCV、python和scikit-image的结构相似性所有（SSIM）来计算图片的不通电。基于图片的不同点，我们也学习了如何标记和可视化两张图片中的不同区域。
+今天的文章，我们学习了如何使用OpenCV、python和scikit-image的结构相似性所有（SSIM）来计算图片的不通电。基于图片的不同点，我们也学习了如何标记和可视化两张图片中的不同区域。
 
 更多关于SSIM的内容，可以参考https://www.pyimagesearch.com/2014/09/15/python-compare-two-images/和scikit-image的文档https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.compare_ssim
+
+https://www.pyimagesearch.com/2017/06/19/image-difference-with-opencv-and-python/
